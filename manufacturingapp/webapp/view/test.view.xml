@@ -1,0 +1,64 @@
+<mvc:View controllerName="manufacturingapp.controller.test"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout">
+   <Page id="page" title="1710: Plant 1 US" titleAlignment="Center">
+        	<Label id="_IDGenLabel1"
+					wrapping="true"
+					class="sapUiTinyMargin" />
+
+		<OverflowToolbar id="_IDGenOverflowToolbar2" class="sapUiTinyMargin">
+			<ToolbarSpacer id="_IDGenToolbarSpacer2" />
+			<Switch id="_IDGenSwitch1"  change="handleChange"/>
+			<CheckBox id="_IDGenCheckBox2" text="Live Update" selected="true"  />
+		</OverflowToolbar>
+	
+
+		<!-- <HBox id="_IDGenHBox1" > -->
+		<!-- <l:HorizontalLayout id="_IDGenVerticalLayout3"   > -->
+			<GenericTile id="_IDGenGenericTile4"   class="sapUiLargeMarginBegin sapUiTinyMarginTop tileLayout"
+			 header="EHS"
+			 subheader="Expenses" press="press" >
+				<TileContent id="_IDGenTileContent1"  footer="TOTAL #INCI" footerColor="Good">
+					<NumericContent id="_IDGenNumericContent4"  value="3"  withMargin="true" />
+				</TileContent>
+			</GenericTile>
+		
+			<GenericTile id="_IDGenGenericTile5"   class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" 
+			header="PRODUCTION"  press="press">
+				<TileContent id="_IDGenTileContent2"   footer="CLOSE WO" footerColor="Good">
+					<NumericContent id="_IDGenNumericContent5"   value="1"  withMargin="true" />
+				</TileContent>
+			</GenericTile>
+		
+			<GenericTile id="_IDGenGenericTile6"  class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" 
+			header="PRODUCTION"  press="press">
+				<TileContent id="_IDGenTileContent3"  unit="Unit" footer="OPEN WO" footerColor="Good">
+					<NumericContent id="_IDGenNumericContent6"  value="10"  withMargin="true" />
+				</TileContent>
+			</GenericTile>
+	   <!-- </l:HorizontalLayout> -->
+		<!-- </HBox> -->
+
+
+        <IconTabBar id="_IDGenIconTabBar1"  class="sapUiResponsiveContentPadding sapUiSmallMargin" backgroundDesign="Solid" >
+			<items>
+				
+            	<IconTabFilter id="_IDGenIconTabFilter2"    key="machines" text="Machines">
+					<mvc:XMLView id="_IDGenXMLView2"  viewName="manufacturingapp.view.machines"/> 
+				</IconTabFilter>
+
+				<IconTabFilter id="_IDGenIconTabFilter1"  key="globalmap" text="Global Map" >
+				 <content> 
+						<mvc:XMLView id="_IDGenXMLView4"  viewName="manufacturingapp.view.mapdemo"/> 
+               		 </content>
+				</IconTabFilter>
+
+             	<IconTabFilter id="_IDGenIconTabFilter3"   key="businessdocuments" text="Business Documents">
+					<mvc:XMLView id="_IDGenXMLView3"  viewName="manufacturingapp.view.doc"/>
+				</IconTabFilter>
+
+			</items>
+		</IconTabBar>
+	</Page>
+	</mvc:View>

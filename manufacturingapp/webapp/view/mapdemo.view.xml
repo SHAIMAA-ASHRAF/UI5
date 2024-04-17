@@ -1,0 +1,12 @@
+    <mvc:View controllerName="manufacturingapp.controller.mapdemo"
+                    displayBlock="true"
+                    xmlns="sap.m"
+                    xmlns:core="sap.ui.core"
+                    xmlns:mvc="sap.ui.core.mvc"
+                    xmlns:html="http://www.w3.org/1999/xhtml">
+ 
+      <html:iframe width="50%" height="50%"
+             src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(Digital%20Control%20Room)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+      </html:iframe>   
+</mvc:View>
+

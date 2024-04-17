@@ -1,0 +1,201 @@
+{
+  "_version": "1.59.0",
+  "sap.app": {
+    "id": "manufacturingapp",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.13.1",
+      "toolsId": "1a59c27e-cebb-4f41-b09d-edc8dcf433ad"
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.122.1",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.f": {},
+        "sap.suite.ui.generic.template": {},
+        "sap.ui.comp": {},
+        "sap.ui.generic.app": {},
+        "sap.ui.table": {},
+        "sap.ushell": {},
+        "sap.ui.vbm": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "manufacturingapp.i18n.i18n"
+        }
+      }
+    },
+    "config": {
+			"sample": {
+				"stretch": true,
+				"files": [
+					"view/manufacturing.view.xml",
+          "view/globalmap.view.xml",
+          "view/plants.view.xml",
+          "view/test.view.xml",
+					"controller/manufacturing.controller.js",
+          "controller/globalmap.controller.js",
+          "controller/plants.controller.js",
+          "controller/test.controller.js",
+         "manifest.json"				
+				]
+			}
+		},
+
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+
+     
+     
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "manufacturingapp.view",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "clearControlAggregation": false,
+        "bypassed": {
+					"target": "Targetmanufacturing"
+				}
+      },
+      "routes": [
+        {
+          "name": "Routemanufacturing",
+          "pattern": ":?query:",
+          "target": "Targetmanufacturing"
+          
+        },
+
+        {
+          "name": "RouteGlobalMap",
+          "pattern": "globalmap",
+          "target": "TargetGlobalMap"
+          
+        },
+
+        {
+          "name": "RouteTest",
+          "pattern": "test",
+          "target": "TargetTest"
+          
+        },
+
+        {
+          "name": "RouteMachines",
+          "pattern": "machines",
+          "target": "TargetMachines"
+          
+        },
+        {
+          "name": "RouteFinal",
+          "pattern": "final",
+          "target": "TargetFinal"
+          
+        },
+        {
+          "name": "Routemapdemo",
+          "pattern": "mapdemo",
+          "target": "Targetmapdemo"
+          
+        }
+      
+      
+      ],
+      "targets": {
+        "Targetmanufacturing": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "manufacturing",
+          "viewName": "manufacturing"
+        },
+        "TargetGlobalMap": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "globalmap",
+          "viewName": "globalmap"
+        },
+        "TargetTest": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "test",
+          "viewName": "test"
+        },
+        "TargetMachines": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "machines",
+          "viewName": "machines"
+        },
+        "TargetFinal": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "final",
+          "viewName": "final"
+        },
+        "Targetmapdemo": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "mapdemo",
+          "viewName": "mapdemo"
+        }
+       
+       
+
+      }
+    },
+    "rootView": {
+      "viewName": "manufacturingapp.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "App"
+    }
+  }
+}

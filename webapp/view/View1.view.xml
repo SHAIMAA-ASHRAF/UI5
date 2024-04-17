@@ -1,0 +1,81 @@
+<mvc:View controllerName="project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+	xmlns:l="sap.ui.layout">
+	
+    <Page id="page" title="{i18n>title}" titleAlignment="Center">
+        	<Label id="_IDGenLabel1"
+		wrapping="true"
+		class="sapUiSmallMargin" />
+
+		<l:VerticalLayout id="_IDGenVerticalLayout1" >
+			<GenericTile id="_IDGenGenericTile1" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Cumulative Totals" subheader="Expenses" press="press">
+				<TileContent id="_IDGenTileContent1" unit="Unit" footer="Footer Text">
+					<NumericContent id="_IDGenNumericContent1" value="1762"  withMargin="true" />
+				</TileContent>
+			</GenericTile>
+		</l:VerticalLayout>
+
+		<l:HorizontalLayout id="_IDGenHorizontalLayout1" >
+			<GenericTile id="_IDGenGenericTile2"  class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Cumulative Totals" subheader="Expenses" press="press">
+				<TileContent id="_IDGenTileContent2"  unit="Unit" footer="Footer Text">
+					<NumericContent id="_IDGenNumericContent2"  value="1762"  withMargin="false" />
+				</TileContent>
+			</GenericTile>
+		</l:HorizontalLayout>
+
+
+		<l:VerticalLayout id="_IDGenVerticalLayout2"  >
+			<GenericTile id="_IDGenGenericTile3" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Cumulative Totals" subheader="Expenses" press="press">
+				<TileContent id="_IDGenTileContent3"  unit="Unit" footer="Footer Text">
+					<NumericContent id="_IDGenNumericContent3"  value="1762"  withMargin="true" />
+				</TileContent>
+			</GenericTile>
+       </l:VerticalLayout>
+
+
+	   <IconTabBar id="_IDGenIconTabBar1" class="sapUiResponsiveContentPadding" backgroundDesign="Solid">
+		<items>
+			<IconTabFilter id="_IDGenIconTabFilter1" key="globalmap" text="Global Map">
+                 <!-- <mvc:XMLView id="_IDGenXMLView1" viewName="APP.view.tab1"/> -->
+				 <!-- <mvc:XMLView viewName="project1.view.View2" id="view2" height="100%"> </mvc:XMLView> -->
+
+
+			</IconTabFilter>
+		</items>
+		</IconTabBar>
+			
+	      </Page>
+</mvc:View>
+
+	
+<!-- 
+		<IconTabBar id="_IDGenIconTabBar1" class="sapUiResponsiveContentPadding" backgroundDesign="Solid">
+		<items>
+			<IconTabFilter id="_IDGenIconTabFilter1" key="globalmap" text="Global Map">
+                 <!-- <mvc:XMLView id="_IDGenXMLView1" viewName="APP.view.tab1"/> -->
+				 <mvc:XMLView viewName="view.View1" id="view1" height="100%"> </mvc:XMLView>
+				
+			
+			</IconTabFilter>
+
+			<IconTabFilter id="_IDGenIconTabFilter6" key="plants" text="Plants">
+		
+
+				<Text id="_IDGenText10" text="Attachments own content goes here..." />
+			</IconTabFilter>
+
+			<IconTabFilter id="_IDGenIconTabFilter9" key="businessdocuments" text="Business Documents">
+
+				<Text id="_IDGenText13" text="Notes own content goes here..." />
+			</IconTabFilter>
+		</items>
+	</IconTabBar> -->
+
+	<!-- </HBox> -->
+	
+	
+
+ 
+
+

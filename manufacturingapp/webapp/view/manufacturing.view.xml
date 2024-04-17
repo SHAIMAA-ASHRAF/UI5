@@ -1,0 +1,69 @@
+<mvc:View controllerName="manufacturingapp.controller.manufacturing"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout">
+   <Page id="page" title="DCR FOR CONNECTED MANUFACTURING" titleAlignment="Center">
+        	<Label id="_IDGenLabel1"
+		wrapping="true"
+		class="sapUiTinyMarginTop" />
+
+		<OverflowToolbar id="_IDGenOverflowToolbar2" class="sapUiTinyMargin">
+			<ToolbarSpacer id="_IDGenToolbarSpacer2" />
+			<Switch id="_IDGenSwitch1"  change="handleChange"/>
+			<CheckBox id="_IDGenCheckBox2" text="Live Update" selected="true"  />
+		</OverflowToolbar>
+
+	
+			<GenericTile id="_IDGenGenericTile4"  class="sapUiLargeMarginBegin sapUiTinyMarginTop tileLayout"
+			 header="PRODCUCTION"
+			 press="press" >
+				<TileContent id="_IDGenTileContent1"  footer="OPEN WO" footerColor="Good">
+					<NumericContent id="_IDGenNumericContent4"  value="10"  withMargin="false" />
+				</TileContent>
+			</GenericTile>
+	
+
+			<GenericTile id="_IDGenGenericTile2"  class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+			 header="PRODCUCTION"  press="press">
+				<TileContent id="_IDGenTileContent2"  footer="#WORDERS" footerColor="Good">
+					<NumericContent id="_IDGenNumericContent2"  value="294"  withMargin="true" />
+				</TileContent>
+			</GenericTile>
+		
+
+		
+			<GenericTile id="_IDGenGenericTile3" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" 
+			header="PRODCUCTION" press="press">
+				<TileContent id="_IDGenTileContent3" footer="CLOSE WO" footerColor="Good">
+					<NumericContent id="_IDGenNumericContent3"  value="1"  withMargin="true"  />
+				</TileContent>
+			</GenericTile>
+    
+
+        <IconTabBar id="_IDGenIconTabBar1" class="sapUiResponsiveContentPadding sapUiSmallMargin" backgroundDesign="Solid" >
+			<items>
+				<IconTabFilter id="_IDGenIconTabFilter1" key="plants" text="Plants" >
+                	 <content> 
+						<mvc:XMLView id="_IDGenXMLView1"  viewName="manufacturingapp.view.globalmap"/> 
+               		 </content>
+				</IconTabFilter>
+
+           		 <IconTabFilter id="_IDGenIconTabFilter4"   key="globalmap" text="Global Map">
+					<content> 
+						<mvc:XMLView id="_IDGenXMLView4"  viewName="manufacturingapp.view.mapdemo"/> 
+					</content>
+				</IconTabFilter>
+		
+        		<IconTabFilter id="_IDGenIconTabFilter3"  key="businessdocuments" text="Business Documents"  >
+						<mvc:XMLView id="_IDGenXMLView2"  viewName="manufacturingapp.view.doc"/> 
+               	</IconTabFilter>
+			</items>
+		</IconTabBar>
+
+		<OverflowToolbar id="_IDGenOverflowToolbar1" class="sapUiMediumMarginTop">
+			<ToolbarSpacer id="_IDGenToolbarSpacer1" />
+			<Button id="_IDGenButton1" text="DCR Admin" type="Accept"/>
+			<Button id="_IDGenButton2" text="Action Cockpit" type="Accept"/>
+		</OverflowToolbar>
+	</Page>
+</mvc:View>

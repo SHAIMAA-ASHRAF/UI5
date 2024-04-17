@@ -1,0 +1,14 @@
+<mvc:View controllerName="project1.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+	xmlns:l="sap.ui.layout">
+	
+    <Page id="page2" title="{i18n>title}" titleAlignment="Center">
+        	<Label 
+		wrapping="true"
+		class="sapUiSmallMargin" />
+
+    </Page>
+</mvc:View>
+
+

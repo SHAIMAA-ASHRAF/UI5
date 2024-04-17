@@ -1,0 +1,29 @@
+<mvc:View controllerName="manufacturingapp.controller.machines"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout">
+    <VBox id="_IDGenVBox1" class="sapUiSmallMarginopBottom sapUiLargeMarginBeginEnd">
+		<HBox id="_IDGenHBox1" justifyContent="SpaceBetween">
+		
+		<HBox id="_IDGenVBox2">
+				<!-- <Text id="_IDGenText1" text="Image:" class="sapUiSmallMarginBottom" /> -->
+				<Image id="_IDGenImage1" src="https://unisig.com/wp-content/uploads/2016/06/UNISIG-deep-hole-drilling-all-machines.jpg" 
+				press="machineImagePress1" backgroundPosition="initial "
+				 width="20em"
+				/>
+
+                <Image id="_IDGenImage2" src="https://columbiamachine.com/wp-content/uploads/sites/2/2021/08/production-machines-1000x1000.jpg" 
+				press="machineImagePress2" height="12em" width="20em" class="sapUiLargeMarginBegin" 
+				/>
+				
+			</HBox>
+		</HBox>
+	</VBox>
+
+	<OverflowToolbar id="_IDGenOverflowToolbar1" class="sapUiMediumMarginTop">
+			<ToolbarSpacer id="_IDGenToolbarSpacer1"/>
+			<Button id="_IDGenButton1" text="DCR Admin" type="Accept"/>
+			<Button id="_IDGenButton2" text="Action Cockpit" type="Accept"/>
+		</OverflowToolbar>
+
+    </mvc:View>

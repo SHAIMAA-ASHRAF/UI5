@@ -1,0 +1,127 @@
+<mvc:View xmlns:core="sap.ui.core" controllerName="manufacturingapp.controller.final" xmlns="sap.m"
+    xmlns:viz="sap.viz.ui5.controls" xmlns:layout="sap.ui.layout"
+    xmlns:mvc="sap.ui.core.mvc" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+    xmlns:viz.data="sap.viz.ui5.data" height="100%">
+<Page
+		id="idPage"
+		title=" 21710092 : Battery Charging" titleAlignment="Center"
+		class= "sapUiResponsivePadding--header" >
+
+
+			
+   <HBox id="_IDGenHBox1" class="sapUiLargeMarginBegin sapUiMediumMarginTop">
+            <Image id="_IDGenImage1" src="https://unisig.com/wp-content/uploads/2016/06/UNISIG-deep-hole-drilling-all-machines.jpg" 
+				press="machineImagePress1" backgroundPosition="initial "
+				height="{/imageHeight}" width="20em"/>
+
+            <Text id="_IDGenText1" text="Battery Charging" class="sapUiLargeMarginBegin sapUiMediumMarginTop"
+                                     textAlign="Center" /> 
+           
+    </HBox>
+
+            <GenericTile id="_IDGenGenericTile4"  class="sapUiLargeMarginBegin sapUiTinyMarginTop  tileLayout"
+             header="SENSOR DATA"
+			  press="press" >
+				<TileContent id="_IDGenTileContent1"  footer="RPM" footerColor="Good">
+					<NumericContent id="_IDGenNumericContent4"  value="1405"  withMargin="true" />
+				</TileContent>
+			</GenericTile>
+
+            <GenericTile id="_IDGenGenericTile2"  class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" 
+            header="SENSOR DATA"  press="press">
+				<TileContent id="_IDGenTileContent2"   footer="TEMPERATURE" footerColor="Good">
+					<NumericContent id="_IDGenNumericContent2"  value="157"  withMargin="true" />
+				</TileContent>
+			</GenericTile>
+
+            <GenericTile id="_IDGenGenericTile3" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" 
+            header="SENSOR DATA"  press="press">
+				<TileContent id="_IDGenTileContent3"  footer="YIELD" footerColor="Good">
+					<NumericContent id="_IDGenNumericContent3"  value="1"  withMargin="true" />
+				</TileContent>
+			</GenericTile>
+
+         <GenericTile id="_IDGenGenericTile5" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" 
+            header="SENSOR DATA"  press="press">
+				<TileContent id="_IDGenTileContent4"  footer="SCRAP" footerColor="Good">
+					<NumericContent id="_IDGenNumericContent5"  value="0" withMargin="true"  />
+				</TileContent>
+			</GenericTile>
+        
+					<Toolbar id="_IDGenToolbar1" class="sapUiMediumMarginTop sapUiLargeMarginBegin " width="39.5em" >
+						<ToolbarSpacer id="_IDGenToolbarSpacer1" />
+						
+						<Button id="btnLegend" icon="sap-icon://legend" press="onPressLegend"
+							tooltip="Hide legend" />
+						<Button id="btnResize" icon="sap-icon://resize" press="onPressResize"
+							tooltip="Minimize" />
+                    </Toolbar>
+					
+    <viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}"
+            vizProperties="{ categoryAxis : {label : {visible : true}, title : {visible : true }}, plotArea : {dataPointSize: {min : 10, max : 10}} }"
+             width="50%" vizType="line" class="sapUiLargeMarginBegin ">
+                <viz:dataset>
+                    <viz.data:FlattenedDataset id="_IDGenFlattenedDataset1" data="{/Products}">
+                        <viz.data:dimensions>
+                            <viz.data:DimensionDefinition id="_IDGenDimensionDefinition1" name="Country"
+                                value="{Country}" />
+                        </viz.data:dimensions>
+                        <viz.data:measures>
+                            <viz.data:MeasureDefinition id="_IDGenMeasureDefinition1" name="Profit"
+                                value="{Profit}" />
+                            <viz.data:MeasureDefinition id="_IDGenMeasureDefinition2" name="Target"
+                                value="{Target}" />
+                        </viz.data:measures>
+                    </viz.data:FlattenedDataset>
+                </viz:dataset>
+
+                <viz:feeds>
+                    <viz.feeds:FeedItem id='valueAxisFeed' uid="valueAxis" type="Measure"
+                        values="Profit" />
+                    <viz.feeds:FeedItem id='categoryAxisFeed' uid="categoryAxis" type="Dimension"
+                        values="Country" />
+                </viz:feeds>
+                <viz:dependents>
+                    <viz:Popover id="idPopOver"></viz:Popover>
+                </viz:dependents>
+            </viz:VizFrame>
+
+            <Toolbar id="_IDGenToolbar2" class="sapUiMediumMarginTop sapUiLargeMarginBegin " width="39.5em" >
+						<ToolbarSpacer id="_IDGenToolbarSpacer2" />
+					
+						<Button id="btnLegend1" icon="sap-icon://legend" press="onPressLegend"
+							tooltip="Hide legend" />
+						<Button id="btnResize1" icon="sap-icon://resize" press="onPressResize"
+							tooltip="Minimize" />
+                    </Toolbar>
+            <viz:VizFrame id="idVizFrame1" uiConfig="{applicationSet:'fiori'}"
+            vizProperties="{ categoryAxis : {label : {visible : true}, title : {visible : true }}, plotArea : {dataPointSize: {min : 10, max : 10}} }"
+             width="50%" vizType="line" class="sapUiLargeMarginBegin ">
+                <viz:dataset>
+                    <viz.data:FlattenedDataset id="_IDGenFlattenedDataset2" data="{/Products}">
+                        <viz.data:dimensions>
+                            <viz.data:DimensionDefinition id="_IDGenDimensionDefinition2" name="Country"
+                                value="{Country}" />
+                        </viz.data:dimensions>
+                        <viz.data:measures>
+                            <viz.data:MeasureDefinition id="_IDGenMeasureDefinition3"  name="Revenue3"
+                                value="{Revenue3}" />
+                            <viz.data:MeasureDefinition id="_IDGenMeasureDefinition4"  name="Revenue"
+                                value="{Revenue}" />
+                        </viz.data:measures>
+                    </viz.data:FlattenedDataset>
+                </viz:dataset>
+
+                <viz:feeds>
+                    <viz.feeds:FeedItem id='valueAxisFeed1' uid="valueAxis" type="Measure"
+                        values="Revenue3" />
+                    <viz.feeds:FeedItem id='categoryAxisFeed1' uid="categoryAxis" type="Dimension"
+                        values="Country" />
+                </viz:feeds>
+                <viz:dependents>
+                    <viz:Popover id="idPopOver1"></viz:Popover>
+                </viz:dependents>
+            </viz:VizFrame>
+
+    </Page>
+</mvc:View>

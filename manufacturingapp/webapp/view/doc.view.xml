@@ -1,0 +1,62 @@
+<mvc:View
+	controllerName="manufacturingapp.controller.doc"
+	xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+	
+<Table id="_IDGenTable1" headerText="Business Document" alternateRowColors="true" >
+    <columns>
+      <Column id="_IDGenColumn1"
+        width="10em">
+        <Text id="_IDGenText1" text="Machine Name" />
+      </Column>
+       <Column id="_IDGenColumn2">
+        <Text id="_IDGenText2" text="Price" />
+      </Column>
+        <Column id="_IDGenColumn3">
+        <Text id="_IDGenText5" text="Description" />
+      </Column>
+    </columns>
+
+
+<items>
+      <ColumnListItem id="_IDGenColumnListItem1">
+        <cells>
+        <Text id="_IDGenText"
+            text="Plant US" />
+          <Text id="_IDGenText3"
+            text="25K USD" />
+            <Text id="_IDGenText4"
+            text="a manufacturing method that automates the control, movement and precision of machine tools through the use of preprogrammed computer software, which is embedded inside the tools" />
+        </cells>
+      </ColumnListItem>
+
+
+      <ColumnListItem id="_IDGenColumnListItem6">
+        <cells>
+        <Text id="_IDGenText6"
+            text="CNC Machine" />
+          <Text id="_IDGenText7"
+            text="300K USD" />
+            <Text id="_IDGenText8"
+            text="a manufacturing method that automates the control, movement and precision of machine tools through the use of preprogrammed computer software, which is embedded inside the tools" />
+        </cells>
+      </ColumnListItem>
+
+
+      
+      <ColumnListItem id="_IDGenColumnListItem7">
+        <cells>
+        <Text id="_IDGenText07"
+            text="Laser Cutter" />
+          <Text id="_IDGenText08"
+            text="450K USD" />
+            <Text id="_IDGenText09"
+            text=" Laser-cutting machines are one of the cutting machines owned and favored by many companies. This machine has a function that can cut various sizes " />
+        </cells>
+      </ColumnListItem>
+    </items>
+  </Table>
+			
+			
+</mvc:View>
